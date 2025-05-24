@@ -66,13 +66,24 @@ const IconSkeleton = ({ item }: Readonly<{ item: IServiceItem }>) => {
     ],
   ];
 
+  // useEffect(() => {
+  //   // @ts-ignore
+  //   animate(sequence, {
+  //     repeat: Infinity,
+  //     repeatDelay: 1,
+  //   });
+  // }, []);
+
   useEffect(() => {
-    // @ts-ignore
-    animate(sequence, {
+  // @ts-ignore
+  animate(sequence, {
+    transition: {
       repeat: Infinity,
       repeatDelay: 1,
-    });
-  }, []);
+    },
+  });
+}, []);
+
 
   return (
     <div className="overflow-hidden h-full relative flex items-center justify-center">
